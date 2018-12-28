@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Suburban Jungle</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<script src="https://use.fontawesome.com/e446468b80.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+	<main>
+		<div class="container padded">
+			<div class="thank-you-message">
+				<div class="icon">
+					<i class="fa fa-check"></i>
+				</div>
+
+				<div class="message">
+					<h4 class="h4">Thank you!</h3>
+					<p>We can't wait to help you find your new home.</p>
+				</div>
+			</div>
+
+			<div class="page-heading">
+				<h2 class="page-header">Schedule Your Consultation</h2>
+				<p class="big typo">Meet your strategy consultant! Schedule your initial strategy session for a date/time that works best for you. This can be done over the phone, in-person or video chat, whatever your preference.</p>
+			</div>
+
+			<div class="consultant">
+				<div class="consultant-info">
+					<div class="img">
+						<img src="http://mediamass.net/jdd/public/documents/celebrities/5857.jpg" alt="">
+					</div>
+
+					<div class="text">
+						<h3 class="h3">Danielle Owens</h3>
+						<p class="big typo">New York City</p>
+
+						<p class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam urna tellus, eget ultrices mi cursus a. Proin auctor urna ullamcorper velit tristique, eu vehicula magna convallis.</p>
+
+						<button class="btn primary green book-btn" data-consultant-toggler="1">Book Consultation</button>
+					</div>
+				</div>
+
+				<div class="consultant-book" data-consultant-target="1">
+					<div class="step current date-select">
+						<div class="step-heading">
+							<div class="step-circle">1</div>
+
+							<div>
+								<h4 class="h4">Select A Date</h4>
+								<p class="typo">Available dates are highlighted in green</p>
+							</div>
+						</div>
+
+						<div class="step-content">
+							<div class="opened-datepick"></div>
+						</div>
+					</div>
+
+					<div class="step time-select">
+						<div class="step-heading">
+							<div class="step-circle">2</div>
+
+							<div>
+								<h4 class="h4">Select A Time</h4>
+								<p class="typo selected-date">Available times for <b></b></p>
+							</div>
+						</div>
+
+						<div class="step-content time-select-content">
+							<div class="available-times">
+								<div class="col"><button class="btn primary white time-select">10:00 am</button></div>
+								<div class="col"><button class="btn primary white time-select">11:00 am</button></div>
+								<div class="col"><button class="btn primary white time-select">2:00 pm</button></div>
+								<div class="col"><button class="btn primary white time-select">4:30 pm</button></div>
+							</div>
+
+							<div class="center-btn">
+								<a href="confirmation.html" class="btn primary green disabled book-btn">Book Consultation</a>
+							</div>
+
+							<div class="cant-find">
+								<a href="#" class="underlined big" data-modal-toggler="notReady">Can't find a date that works?</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="consultant-not-ready">
+				<a href="#" class="underlined big" data-modal-toggler="notReady">Not ready to schedule?</a>
+			</div>
+		</div>
+	</main>
+
+	<div class="modal">
+		<div class="modal-inner" data-modal-target="notReady">
+			<div class="modal-close" data-modal-close>
+				<div class="css-close"></div>
+			</div>
+
+			<h3>Requesting Preferred Dates</h3>
+
+			<p class="big">Can't find a date and time that works for you? Let us know what your availability is and we'll try to make it work!</p>
+
+			<div class="input-row block">
+				<label class="input">Name</label>
+				<input type="text">
+			</div>
+
+			<div class="input-row block">
+				<label class="input">Email</label>
+				<input type="email">
+			</div>
+
+			<div class="input-row block">
+				<label class="input">What is your availability or preferred dates?</label>
+				<textarea cols="30" rows="5"></textarea>
+			</div>
+
+			<div class="center-btn">
+				<button class="btn primary green">Submit</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/lib/jquery.plugin.min.js"></script>
+	<script src="js/lib/jquery.datepick.min.js"></script>
+	<script src="js/ui-scripts.js"></script>
+</body>

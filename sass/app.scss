@@ -1,0 +1,24 @@
+//Global variables and helpers
+@import "abstract/_variables.scss";
+@import "abstract/_mixins.scss";
+@import "abstract/_helpers.scss";
+@import "abstract/_placeholders.scss";
+
+//Resets, typography and global styles
+@import "base/_normalize.scss";
+@import "base/_global.scss";
+@import "base/_fonts.scss";
+@import "base/_typography.scss";
+
+@import "components/_buttons.scss";
+@import "components/_modals.scss";
+@import "components/_sections.scss";
+@import "components/_datepick.scss";
+@import "components/_inputs.scss";
+
+@import "layout/_grid.scss";
+@import "layout/_navigation.scss";
+@import "layout/_forms.scss";
+@import "layout/_global.scss";
+
+@import "pages/_schedule.scss";

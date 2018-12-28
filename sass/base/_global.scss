@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,700i');
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+
+	&.rounded {
+		border-radius: 50%;
+	}
+}
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+
+	@include max-width($desktop) {
+		font-size: 50%;
+		height: auto;
+	}
+
+	@include max-width($landscape) {
+		font-size: 42%;
+	}
+}
+
+body {
+	position: relative;
+	height: 100%;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.hide-tablet {
+	@include max-width($tablet) {
+		display: none;
+	}
+}
+
+.hide-landscape {
+	@include max-width($landscape) {
+		display: none !important;
+	}
+}
+
+.hide-portrait {
+	@include max-width($portrait) {
+		display: none;
+	}
+}
+
+.show-tablet {
+	@include min-width($desktop) {
+		display: none;
+	}
+}
+
+.hide-mobile {
+	@include max-width($desktop) {
+		display: none;
+	}
+}
+
+.show-mobile {
+	display: none;
+
+	@include max-width($desktop) {
+		display: flex;
+	}
+}
+
+.show-mobile-block {
+	display: none;
+
+	@include max-width($desktop) {
+		display: block;
+	}
+}
+
+.disable-hover,
+.disable-hover * {
+	pointer-events: none !important;
+}

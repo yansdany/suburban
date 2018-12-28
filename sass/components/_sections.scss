@@ -1,0 +1,56 @@
+// Sections
+//
+// Markup:
+// <section class="{{modifier_class}}">
+//   <div class="section-title">
+//    <i class="icon"></i>
+//    <h2 class="header h2">Section title</h2>
+//   </div>
+// </section>
+//
+// .small - Small size
+// .medium - Medium size
+// .bordered-top - Border on top
+// .bordered-btm - Border on bottom
+//
+// Style guide: components.sections
+
+$section-padding:               40px 10px 60px;
+$section-medium-padding:        60px 10px 80px;
+$section-small-padding:         30px 10px 45px;
+
+$section-title-mb:              40px;
+$section-title-icon-mb:         15px;
+
+section {
+  padding: $section-padding;
+
+  &.small {
+    padding: $section-small-padding;
+  }
+
+  &.medium {
+    padding: $section-medium-padding;
+  }
+
+  &.bordered-top {
+    border-top: 1px solid $border;
+  }
+
+  &.bordered-btm {
+    border-bottom: 1px solid $border;
+  }
+}
+
+.section-title {
+  margin-bottom: $section-title-mb;
+  text-align: center;
+
+  .icon {
+    margin-bottom: $section-title-icon-mb;
+  }
+
+  &.left {
+    text-align: left;
+  }
+}

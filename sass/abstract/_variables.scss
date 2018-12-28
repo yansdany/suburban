@@ -1,0 +1,58 @@
+$layout-full-width: false;
+
+// -------------------
+// COLORS
+// -------------------
+
+// GLOBAL COLORS
+$pure-white: #fff;
+$pure-black: #000;
+
+// INPUT COLORS
+$input-color: #525A65;
+$input-border: #929AAD;
+$g-input-focused: #029ECC;
+
+// BRAND COLORS
+$orange: #D35400;
+$aquam: #02B3E4;
+$green: #88bf4b;
+$blue: #2471A3;
+$purple: #A569BD;
+$red: #CB4335;
+$grey-bg: #AEB6BF;
+
+// BORDER COLORS
+$border: #ddd;
+
+// ICON COLORS
+$g-icon-default-color: $grey-bg;
+
+// -------------------
+// Typography
+// -------------------
+// font weights
+$bold: 600;
+$semi: 500;
+$light: 300;
+
+// Select box
+$select-blue-title: $g-input-focused;
+$input-height: 66px;
+$input-grey: $input-color;
+
+// -------------------
+// Breakpoints
+// -------------------
+
+$compact: 1440px;
+$desktop: 1024px;
+$tablet: $desktop;
+$tablet-portrait: 768px;
+$landscape: 640px;
+$mobile: $landscape;
+$portrait: 480px;
+
+// Transitions
+$cb: cubic-bezier(0.25, 0.8, 0.25, 1);
+$cb-qck: cubic-bezier(0.23, 1, 0.32, 1);

@@ -1,0 +1,159 @@
+.thank-you-message {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .icon {
+    margin-right: 35px;
+  }
+
+  .fa {
+    font-size: 44px;
+    color: $green;
+  }
+
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
+
+    &.sep {
+      margin-top: 20px;
+    }
+  }
+}
+
+.page-heading {
+  margin: 52px auto 60px;
+  padding: 0 15px;
+  text-align: center;
+
+  .header {
+    margin-bottom: 32px;
+  }
+}
+
+.consultant {
+  .consultant-info {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 20px 15px 0;
+
+    .img {
+      margin-right: 40px;
+
+      img {
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+        min-height: 150px;
+        border-radius: 50%;
+      }
+    }
+
+    @include max-width($mobile) {
+      flex-direction: column;
+
+      .img {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &.booking {
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.25);
+  }
+}
+
+.consultant-not-ready {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.consultant-book {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  display: flex;
+
+  @include max-width($tablet-portrait) {
+    flex-direction: column;
+
+    .step {
+      margin-right: 0;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .step {
+    flex: 1;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.time-select {
+      display: flex;
+      flex-direction: column;
+
+      .step-content {
+        flex: 1;
+      }
+    }
+  }
+
+  @extend %hidden-reveal;
+}
+
+.step-heading {
+  display: flex;
+  align-items: center;
+
+  .step-circle {
+    margin-right: 20px;
+  }
+
+  .selected-date {
+    display: none;
+  }
+}
+
+.step-circle {
+  @include circle(30px);
+  font-size: 20px;
+  font-weight: 600;
+  background-color: lightgrey;
+  color: #fff;
+
+  .current & {
+    background-color: #606674;
+  }
+}
+
+.step-content {
+  margin-top: 20px;
+
+  &.time-select-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .center-btn {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .cant-find {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.available-times {
+  @include row($desktop-count: 2, $col-stretch: false);
+  @extend %hidden-reveal;
+}

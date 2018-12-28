@@ -1,0 +1,130 @@
+$font: 'Roboto Condensed', sans-serif !default;
+$font-size: 15px !default;
+$line-height: 1.2 !default;
+$text-color: #636363 !default;
+$heading-text-color: #4a4a4a !default;
+$link-color: #21618C !default;
+$link-font-size: 15px;
+$p-font-size: 16px;
+$p-bigger-font-size: 19px;
+
+$font-accent: 'Source Sans Pro', sans-serif !default;
+$accent-font-size: 20px;
+
+$header-font-sizes: (
+	h1: 48px,
+	h2: 34px,
+	h3: 24px,
+	h4: 20px,
+	h5: 13px
+);
+
+body {
+	font-family: $font;
+	line-height: $line-height;
+	font-size: $font-size;
+	color: $text-color;
+}
+
+// Headers
+
+@each $header, $size in $header-font-sizes {
+	.#{$header} {
+		font-size: $size;
+		margin-bottom: 0;
+		margin-top: 0;
+		color: $heading-text-color;
+
+	@include max-width($tablet) {
+			font-size: $size * 0.75;
+		}
+	}
+
+	#{$header} {
+		font-size: $size;
+		color: $heading-text-color;
+		font-weight: 400;
+
+		@include max-width($tablet) {
+			font-size: $size * 0.75;
+		}
+	}
+}
+
+// Paragraphs
+
+p {
+	font-size: $p-font-size;
+	font-weight: 300;
+
+	&.big {
+		font-size: $p-bigger-font-size;
+	}
+
+	&.typo {
+		margin: 0;
+	}
+
+	a {
+		font-size: $p-font-size;
+	}
+}
+
+.header {
+	line-height: 1;
+	font-weight: 400;
+
+	&.sub {
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+
+		@include max-width($tablet) {
+			font-size: 11px;
+		}
+	}
+
+	&.thin {
+		font-weight: 300;
+	}
+}
+
+.accent-text {
+	font-family: $font-accent;
+	font-size: $accent-font-size;
+	font-style: italic;
+	font-weight: 400;
+
+	&.bold {
+		font-weight: 600;
+	}
+}
+
+// Links
+// ---------------------------------
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: $link-color;
+	font-size: $link-font-size;
+	font-weight: 300;
+
+	&.underlined {
+		text-decoration: underline;
+		color: $text-color;
+	}
+
+	&.big {
+		font-size: $p-bigger-font-size;
+	}
+
+	&:hover {
+		color: $green;
+	}
+}
+
+a,
+.fa {
+	transition: color 240ms $cb;
+}
